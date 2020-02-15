@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="scss/Reservation.css">
+    <title>Réservation</title>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="Images/LogoSTE.png">
+  
+        
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  
+        
+          <ul class="menu">
+            <li><a href="Galerie.html">Galerie</a></li>
+            <li><a href="Reservation.html">Réservation</a></li>
+            <li><a href="inscris-toi.html">Inscris-toi</a></li>
+          </ul>
+       
+  
+        </header> 
+    
+        <div class="contenu">
+            <form class="pure-form">
+    
+                   <!--  <legend>Inscris-toi</legend>-->
+                <span><img src="Images/application.png" style="width: 20%; height: 80px;"></span>
+                <select  id="mySelect">
+                    <option>-- Modèle Voiture à louer --</option>
+                    <option value="MERCEDES">Mercedes minimal</option>
+                    <option value="LUXURY">Luxury Automobile</option>
+                    <option value="SPORT CAR">Black sports car</option>
+                    <option value="FIAT">White FIAT</option>
+                </select>
+                     
+                <input type="text" placeholder="Nom" id="nom" required>
+                <div class="dateBirth">
+                    <input type="text" placeholder="JJ" id="JJ">
+                    <input type="text" placeholder="MM" id="MM">
+                    <input type="text" placeholder="YY" id="YY">
+                    </div>
+                <input type="text" placeholder="période de location" id="PeroideL" required>
+                <input type="text" placeholder="Nombre Personne" id="NbrL" required>
+               
+                <!--  <button type="submit" class="pure-button pure-button-primary"><i class="fas fa-check"></i>&emsp;Confirm</button> -->
+               
+    
+                <button class="button type2" style="position: absolute; top: 400px;" onclick="age();">
+                    <i class="fas fa-check"></i>&emsp;reservez
+                </button>
+           
+            </form>
+
+        </div>
+        <div id="monSpan" style="position: relative; top: 200px;"></div>
+
+        <script>
+            //Partie d'Age
+            //création de variables
+          
+            //création de la fonction
+            function age(){
+            var anneeNaissance;
+            var age;
+            var phrase;
+            var annee = new Date().getFullYear()
+            var CarSelected = document.getElementById("mySelect").value;
+            var nom = document.getElementById("nom").value;
+            var prd=document.getElementById("PeroideL").value;
+            var NBRPersonne=document.getElementById("NbrL").value;
+              //Attribution des valeurs a (donnée par l'utilisateur) et b (calculée par la fonction)
+              anneeNaissance = parseInt(document.getElementById("YY").value);
+              age = annee-anneeNaissance;
+              //condition pour l'attribution de la valeur c selon l'age de la personne
+              if(age<18){
+                alert("Vous êtes mineur.");
+              }
+            else{
+                //confirm("Votre age est: "+age+" ans!"+"\n"+"Le modèle de voiture sélectionné est: "+CarSelected+"\n"+"Nom: " +nom);
+                confirm("Le modèle de voiture sélectionné est: "+CarSelected+"\n"+"Votre Nom est: " +nom+"\n"+"Votre Age est: "+age+"\n"+"Peroide de location est: "+prd+"\n"+"Nombre de personne est: "+NBRPersonne);
+            }
+
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inscris-toi</title>
+    <link rel="stylesheet" href="scss/inscris-toi.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        <img class="logo" src="Images/LogoSTE.png">
+
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+
+        <ul class="menu">
+            <li><a href="Galerie.html">Galerie</a></li>
+            <li><a href="Reservation.html">Réservation</a></li>
+            <li><a href="inscris-toi.html">Inscris-toi</a></li>
+        </ul>
+
+
+    </header>
+
+    <div class="contenu">
+        <form class="pure-form">
+
+               <!--  <legend>Inscris-toi</legend>-->
+            <span><img src="Images/icons8-add-user-group-woman-man-96.png"></span>
+            <input type="text" placeholder="Nom" id="nom" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <input type="password" placeholder="Confirm Password" id="confirm_password" required>
+
+            <!--  <button type="submit" class="pure-button pure-button-primary"><i class="fas fa-check"></i>&emsp;Confirm</button> -->
+
+
+            <button class="button type2" style="position: absolute; top: 400px;">
+                <i class="fas fa-check"></i>&emsp;Confirm
+            </button>
+        </form>
+
+    </div>
+    
+    <script>
+        var password = document.getElementById("password"),
+            confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+</body>
+
+</html>

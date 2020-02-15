@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700&display=swap');
+
+$max_width: 850px;
+$primary_color:#ffc831;
+$light_color: #fff;
+$dark_color: #000;
+
+* { 
+    margin: 0;
+    padding: 0;
+  }
+
+body
+ {      
+     font-family: 'Roboto', sans-serif;
+    
+ }
+
+
+.header {
+    background-color: $light_color;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    & ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: $light_color;
+      }
+      & li a {
+        display: block;
+        padding: 20px 20px;
+        border-right: 1px solid $light_color ;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        color: $dark_color;
+
+        &:hover{
+            background-color: #f0ebeb;
+        }
+      }
+    
+      & .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+        text-decoration: none;
+        width: 150px;
+        height: 70px;
+      }
+      & .menu-btn:hover {
+        background-color: $light_color
+      }
+       /* menu */
+      & .menu {
+      clear: both;
+      /*La propriété clear indique si un élément peut être situé à côté d'éléments flottants qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments*/
+      max-height:0;
+      }
+        /* menu icon */
+  
+      & .menu-icon {
+       cursor: pointer;
+       float: right;
+       padding: 30px;
+       position: relative;
+
+       & .navicon {
+        background: $dark_color;
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 18px;
+        &:before,
+        &:after {
+           background: $dark_color;
+           content: '';
+           display: block;
+           height: 100%;
+           position: absolute;
+           width: 100%;
+        }
+        &:before {
+            top: 5px;
+          }
+        &:after {
+            top: -5px;
+          }
+    }
+  }
+    /* menu btn */
+  
+    & .menu-btn {
+        display: none;
+        &:checked~ .menu {
+            
+            max-height: 240px;
+          }
+        &:checked ~ .menu-icon .navicon {
+            background: transparent;
+          }
+        &:checked ~ .menu-icon .navicon:before {
+            transform: rotate(-45deg);
+          }
+        &:checked ~ .menu-icon .navicon:after {
+            transform: rotate(45deg);
+          }
+        &:checked ~ .menu-icon .navicon:before,
+        &:checked ~ .menu-icon .navicon:after {
+            top: 0;
+          }
+      }
+}
+

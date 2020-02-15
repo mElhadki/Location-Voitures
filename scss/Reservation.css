@@ -1,0 +1,370 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  /* menu */
+  /* menu icon */
+  /* menu btn */
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+}
+
+.header li a:hover {
+  background-color: #f0ebeb;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 150px;
+  height: 70px;
+}
+
+.header .menu-btn:hover {
+  background-color: #fff;
+}
+
+.header .menu {
+  clear: both;
+  /*La propriété clear indique si un élément peut être situé à côté d'éléments flottants qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments*/
+  max-height: 0;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 30px;
+  position: relative;
+}
+
+.header .menu-icon .navicon {
+  background: #000;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+  background: #000;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before,
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  top: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  /* menu */
+  /* menu icon */
+  /* menu btn */
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+}
+
+.header li a:hover {
+  background-color: #f0ebeb;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 150px;
+  height: 70px;
+}
+
+.header .menu-btn:hover {
+  background-color: #fff;
+}
+
+.header .menu {
+  clear: both;
+  /*La propriété clear indique si un élément peut être situé à côté d'éléments flottants qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments*/
+  max-height: 0;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 30px;
+  position: relative;
+}
+
+.header .menu-icon .navicon {
+  background: #000;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+  background: #000;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before,
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  top: 0;
+}
+
+.contenu {
+  width: 50%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 3px 7px 25px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 7px 25px 10px rgba(0, 0, 0, 0.1);
+  /* & .pure-button{
+    background: white;
+    width: 20%;
+    border: 1px solid black;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    
+&:hover{
+    background-color: #ffc400;
+}
+} */
+}
+
+.contenu form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+.contenu legend {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+}
+
+.contenu input, .contenu select {
+  background: #f2f2f2;
+  width: 50%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.button.type2 {
+  color: #ffc400;
+  height: 50px;
+  width: 20%;
+  border: 0px;
+  font-size: 20px;
+}
+
+.button.type2:after,
+.button.type2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffc400;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.button.type2:hover:before {
+  top: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.button.type2:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/* media query  */
+@media screen and (max-width: 850px) {
+  .contenu {
+    width: 90%;
+    margin-top: 80px;
+  }
+  .button.type2 {
+    width: 30%;
+  }
+}
+
+.dateBirth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+#JJ, #MM {
+  width: 25%;
+}
+/*# sourceMappingURL=Reservation.css.map */

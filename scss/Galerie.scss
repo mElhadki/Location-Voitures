@@ -1,0 +1,400 @@
+@import 'Menu';
+
+.slideshow-container {
+  width: 90%;
+  position: relative;
+  top: 150px;
+  margin: auto;
+}
+
+.numbers {
+  position: absolute;
+  top: 0;
+  color: #f2f2f2;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.myslides {
+  display: none;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px;
+  margin-top: -22px;
+  border-radius: 0 3px 3px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption {
+  text-align: center;
+  position: absolute;
+  bottom: 300px;
+  width: 100%;
+  color: #f2f2f2;
+  letter-spacing: 2px;
+
+  & h1 {
+    font-size: 60px;
+  }
+
+  & h2 {
+    font-size: 30px;
+  }
+
+  & span {
+
+    color: rgb(255, 196, 0);
+  }
+}
+
+.dots {
+  position: relative;
+  top: 150px;
+  width: 13px;
+  height: 13px;
+  background: gray;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.fade img {
+  width: 100%;
+  height: 700px;
+
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.active,
+.dot:hover {
+  background-color: #333;
+
+}
+
+.Contenu1 {
+  position: relative;
+  top: 220px;
+  color: rgb(255, 196, 0);
+
+}
+
+
+.Box {
+  display: flex;
+  height: 300px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+
+
+  & p {
+
+    font-size: 25px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+
+  & img {
+    width: 20%;
+    height: 25%;
+  }
+
+}
+
+.Box2 {
+  margin-top: -80px;
+  width: 70%;
+  height: 100px;
+  background-color: rgb(255, 196, 0);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+  & p {
+
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+}
+
+.Catalogue .Para {
+  position: relative;
+  top: 300px;
+  text-align: center;
+  color: rgb(255, 196, 0);
+}
+
+.Catalogue-Contenu {
+
+  height: 280px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 3px 7px 25px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 400px;
+
+  & .Catalogue-IMG img {
+    float: left;
+    width: 25%;
+    height: 200px;
+
+  }
+
+  & .Catalogue-Info {
+
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    position: relative;
+    left: 10px;
+
+    & img {
+      width: 5%;
+      height: 30px;
+
+
+    }
+
+    & .Location {
+      display: flex;
+
+      & p {
+        margin-top: 8px;
+      }
+
+    }
+
+    & .More-Info {
+      display: flex;
+      margin-top: 10px;
+
+      & img {
+        width: 20%;
+        height: 30px;
+
+      }
+
+      & .Info1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+}
+
+.btn button {
+  width: 20%;
+  cursor: pointer;
+  font-size: 15px;
+  height: 40px;
+  position: relative;
+  top: -100px;
+  right: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  background-color: rgb(255, 196, 0);
+  float: right;
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  top: 500px;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(255, 196, 0);
+
+  & .footer-right {
+
+    margin-top: 50px;
+    float: right;
+    font-size: 20px;
+
+    & .fab {
+      color: black;
+
+    }
+
+  }
+
+  & .footer-left {
+    margin-left: 100px;
+    width: 50%;
+    position: relative;
+    top: 30px;
+
+    & p.footer-links {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 0 0 10px;
+      padding: 0;
+
+
+      & a {
+
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+
+      }
+    }
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width:850px) {
+
+  .slideshow-container {
+    width: 100%;
+  }
+
+  .prev,
+  .next {
+
+
+    margin-top: -30px;
+  }
+
+  .Box {
+    display: block;
+  }
+
+  .caption {
+    text-align: center;
+    position: absolute;
+    bottom: 180px;
+    width: 100%;
+    color: #f2f2f2;
+    letter-spacing: 2px;
+
+    & h1 {
+      font-size: 30px;
+    }
+
+    & h2 {
+      font-size: 20px;
+    }
+
+  }
+
+  .dots {
+    position: relative;
+    top: 150px;
+    width: 13px;
+    height: 13px;
+    background: gray;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .fade img {
+
+    height: 400px;
+
+  }
+
+  .Box2 {
+
+    display: block;
+    margin-top: 250px;
+    width: 99%;
+    height: 200px;
+    text-align: center;
+  }
+
+  .Catalogue-Contenu {
+
+    height: 450px;
+    width: 80%;
+
+    & .Catalogue-IMG img {
+      width: 100%;
+      height: 200px;
+
+    }
+
+    & .Catalogue-Info {
+
+      width: 80%;
+
+    }
+
+  }
+
+  .Catalogue-Contenu {
+    width: 90%;
+
+  }
+  .btn button{
+
+    position: relative;
+    top: 5px;
+    right: 5px;
+    
+
+  }
+  
+  footer {
+    height: 200px;
+
+    & .footer-right {
+
+      float: none;
+      text-align: center;
+      position: relative;
+      top: 40px;
+    }
+
+    & .footer-left {
+      text-align: center;
+      width: 50%;
+      top: 60px;
+
+    }
+  }
+}
